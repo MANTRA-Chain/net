@@ -53,9 +53,9 @@ jobs:
             --chain_id ${{ inputs.chain_id }}
 
       - name: Create Pull Request
-        uses: peter-evans/create-pull-request@v5
+        uses: peter-evans/create-pull-request@v7
         with:
-          token: ${{ secrets.GITHUB_TOKEN }}
+          token: ${{ secrets.PR_AUTOMATION_GIT_TOKEN }}
           commit-message: "feat: add upgrade guide for ${{ inputs.upgrade_version }}"
           title: "feat: add upgrade guide for ${{ inputs.chain_id }} ${{ inputs.upgrade_version }}"
           body: |
