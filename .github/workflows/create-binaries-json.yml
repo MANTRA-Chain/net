@@ -1,5 +1,10 @@
 name: Create Binaries JSON
 
+permissions:
+  packages: read
+  contents: write
+  pull-requests: write
+
 on:
   workflow_dispatch:
     inputs:
