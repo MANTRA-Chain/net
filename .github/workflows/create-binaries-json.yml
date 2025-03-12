@@ -1,0 +1,58 @@
+name: Create Binaries JSON
+
+on:
+  workflow_dispatch:
+    inputs:
+      chain_id:
+        description: 'Chain ID (mantra-1 or mantra-dukong-1)'
+        required: true
+        type: choice
+        options:
+          - mantra-1
+          - mantra-dukong-1
+      tag:
+        description: 'Release tag (e.g v3.0.0)'
+        required: true
+      checksums_url:
+        description: 'URL to checksums file (optional)'
+        required: false
+
+jobs:
+  create-binaries-json:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.10'
+
+      - name: Install dependencies
+        run: pip install -r scripts/create_binaries_json/requirements.txt
+
+      - name: Create binaries JSON
+        run: |
+          if [ -n "${{ inputs.checksums_url }}" ]; then
+            python scripts/create_binaries_json/create_binaries_json.py \
+              --chain_id ${{ inputs.chain_id }} \
+              --checksums_url ${{ inputs.checksums_url }}
+          else
+            python scripts/create_binaries_json/create_binaries_json.py \
+              --chain_id ${{ inputs.chain_id }} \
+              --tag ${{ inputs.tag }}
+          fi
+
+      - name: Create Pull Request
+        uses: peter-evans/create-pull-request@v5
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          commit-message: "feat: add cosmovisor.json for ${{ inputs.tag }}"
+          title: "feat: add cosmovisor.json for ${{ inputs.tag }}"
+          body: |
+            Created cosmovisor.json for ${{ inputs.chain_id }} version ${{ inputs.tag }}
+            
+            Using checksums from: ${{ inputs.checksums_url || format('https://github.com/MANTRA-Chain/mantrachain/releases/download/{0}/sha256sum.txt', inputs.tag) }}
+          branch: feat/cosmovisor-json-${{ inputs.tag }}
+          base: main
+          draft: true

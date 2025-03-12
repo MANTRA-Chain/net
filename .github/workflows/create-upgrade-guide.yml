@@ -1,0 +1,64 @@
+name: Create Upgrade Guide
+
+on:
+  workflow_dispatch:
+    inputs:
+      current_version:
+        description: 'Current version (e.g v2)'
+        required: true
+      upgrade_version:
+        description: 'Upgrade version (e.g v3)'
+        required: true
+      upgrade_tag:
+        description: 'Upgrade tag (e.g v3.0.0)'
+        required: true
+      proposal_id:
+        description: 'Proposal ID'
+        required: true
+      upgrade_block:
+        description: 'Upgrade block height'
+        required: true
+      chain_id:
+        description: 'Chain ID (mantra-1 or mantra-dukong-1)'
+        required: true
+        type: choice
+        options:
+          - mantra-1
+          - mantra-dukong-1
+
+jobs:
+  create-guide:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.10'
+
+      - name: Create upgrade guide
+        run: |
+          python scripts/create_upgrade_guide/create_upgrade_guide.py \
+            --current_version ${{ inputs.current_version }} \
+            --upgrade_version ${{ inputs.upgrade_version }} \
+            --upgrade_tag ${{ inputs.upgrade_tag }} \
+            --proposal_id ${{ inputs.proposal_id }} \
+            --upgrade_block ${{ inputs.upgrade_block }} \
+            --chain_id ${{ inputs.chain_id }}
+
+      - name: Create Pull Request
+        uses: peter-evans/create-pull-request@v5
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          commit-message: "feat: add upgrade guide for ${{ inputs.upgrade_version }}"
+          title: "feat: add upgrade guide for ${{ inputs.chain_id }} ${{ inputs.upgrade_version }}"
+          body: |
+            Created upgrade guide for ${{ inputs.chain_id }} from ${{ inputs.current_version }} to ${{ inputs.upgrade_version }}
+            
+            - Upgrade Block: ${{ inputs.upgrade_block }}
+            - Proposal ID: ${{ inputs.proposal_id }}
+            - Tag: ${{ inputs.upgrade_tag }}
+          branch: feat/upgrade-guide-${{ inputs.upgrade_version }}
+          base: main
+          draft: true
