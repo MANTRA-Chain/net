@@ -58,6 +58,6 @@ jobs:
             Created cosmovisor.json for ${{ inputs.chain_id }} version ${{ inputs.tag }}
             
             Using checksums from: ${{ inputs.checksums_url || format('https://github.com/MANTRA-Chain/mantrachain/releases/download/{0}/sha256sum.txt', inputs.tag) }}
-          branch: feat/cosmovisor-json-${{ inputs.tag }}
+          branch: feat/cosmovisor-json-${{ inputs.chain_id }}-${{ inputs.tag }}
           base: main
           draft: true

@@ -64,6 +64,6 @@ jobs:
             - Upgrade Block: ${{ inputs.upgrade_block }}
             - Proposal ID: ${{ inputs.proposal_id }}
             - Tag: ${{ inputs.upgrade_tag }}
-          branch: feat/upgrade-guide-${{ inputs.upgrade_version }}
+          branch: feat/upgrade-guide-${{ inputs.chain_id }}-${{ inputs.upgrade_version }}
           base: main
           draft: true
