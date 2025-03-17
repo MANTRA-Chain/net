@@ -9,16 +9,16 @@
   "node_home": "$HOME/.mantrachain",
   "codebase": {
     "genesis": {
-      "genesis_url": "https://raw.githubusercontent.com/MANTRA-Chain/net/main/mantra-1/genesis.json"
+      "genesis_url": "https://raw.githubusercontent.com/MANTRA-Chain/net/main/mantra-dukong-1/genesis.json"
     },
     "git_repo": "github.com/MANTRA-Chain/mantrachain",
-    "recommended_version": "v2.0.2",
-    "compatible_versions": ["v2.0.0", "v2.0.1", "v2.0.2"],
+    "recommended_version": "v3.0.0",
+    "compatible_versions": ["v3.0.0"],
     "binaries": {
-      "darwin/amd64": "https://github.com/MANTRA-Chain/mantrachain/releases/download/v2.0.2/mantrachaind-2.0.2-darwin-amd64.tar.gz?checksum=sha256:60b88e925f0cfe2cda3c84969eb0378b3131a4ef162b3f1f475cbee4ad50655a",
-      "darwin/arm64": "https://github.com/MANTRA-Chain/mantrachain/releases/download/v2.0.2/mantrachaind-2.0.2-darwin-arm64.tar.gz?checksum=sha256:6f0467a874849acce1a406f85db9c6745b85b25fb74c69549a78e19c641a4865",
-      "linux/amd64": "https://github.com/MANTRA-Chain/mantrachain/releases/download/v2.0.2/mantrachaind-2.0.2-linux-amd64.tar.gz?checksum=sha256:baee96cc6482eac175391eecbea7ecf104fe2ee355164d5bc35ddcb749ac830a",
-      "linux/arm64": "https://github.com/MANTRA-Chain/mantrachain/releases/download/v2.0.2/mantrachaind-2.0.2-linux-arm64.tar.gz?checksum=sha256:51a11ed67185174c97a89ff526b6f25de2695efd44db3bda09543f1e89c3cd79"
+      "linux/amd64": "https://github.com/MANTRA-Chain/mantrachain/releases/download/v3.0.0/mantrachaind-3.0.0-linux-amd64.tar.gz?checksum=sha256:50ae2f624c477bc86272d5c2eeb53e0fdbc636211dd2af799a2b6c475afd90af",
+      "linux/arm64": "https://github.com/MANTRA-Chain/mantrachain/releases/download/v3.0.0/mantrachaind-3.0.0-linux-arm64.tar.gz?checksum=sha256:d03e6a1731d25521e5517a6145ed9bc59f5a1bd11377ab03fae24710914d9a34",
+      "darwin/amd64": "https://github.com/MANTRA-Chain/mantrachain/releases/download/v3.0.0/mantrachaind-3.0.0-darwin-amd64.tar.gz?checksum=sha256:fc7318fd834fe5b2912f309aec08aadbad085e7f220390d922cf8177542a4db0",
+      "darwin/arm64": "https://github.com/MANTRA-Chain/mantrachain/releases/download/v3.0.0/mantrachaind-3.0.0-darwin-arm64.tar.gz?checksum=sha256:607ed92b71d0db1b8abbf5282392e734c04de8ac3945d970bfbe83088766d0d3"
     }
   },
   "fees": {
