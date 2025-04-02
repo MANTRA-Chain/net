@@ -126,7 +126,8 @@ def load_cosmovisor_json(upgrade_dir: Path) -> Dict:
     
     try:
         with open(cosmovisor_path, 'r') as f:
-            return json.load(f)
+            data = json.load(f)
+            return data
     except json.JSONDecodeError as e:
         logger.error(f"Error parsing cosmovisor.json: {e}")
         return {}
@@ -166,38 +167,60 @@ def update_meta_json(chain_id: str, version: str, cosmovisor_data: Dict) -> bool
         with open(meta_path, 'r') as f:
             meta = json.load(f)
         
-        # Backup current data
-        orig_meta = meta.copy()
+        # Create a deep copy to properly detect changes
+        orig_meta = json.loads(json.dumps(meta))
         
         # Update version information
         if 'codebase' in meta:
+            # Update recommended version
             if 'recommended_version' in meta['codebase']:
-                meta['codebase']['recommended_version'] = f"v{version}"
+                current_version = meta['codebase']['recommended_version']
+                new_version = f"v{version}"
+                logger.info(f"Updating recommended_version from {current_version} to {new_version}")
+                meta['codebase']['recommended_version'] = new_version
             
+            # Replace compatible versions instead of appending
             if 'compatible_versions' in meta['codebase']:
-                if f"v{version}" not in meta['codebase']['compatible_versions']:
-                    meta['codebase']['compatible_versions'].append(f"v{version}")
+                new_version = f"v{version}"
+                logger.info(f"Replacing compatible_versions with only {new_version}")
+                meta['codebase']['compatible_versions'] = [new_version]
             
             # Update binaries if cosmovisor data is available
-            if cosmovisor_data and 'binaries' in meta['codebase'] and 'binaries' in cosmovisor_data:
-                meta['codebase']['binaries'] = {}
+            if cosmovisor_data:                
+                # First try to find binaries in the cosmovisor_data
+                binaries_data = None
+                if 'binaries' in cosmovisor_data:
+                    binaries_data = cosmovisor_data['binaries']
+                else:
+                    # Look for platform keys directly (linux/amd64, etc.)
+                    platform_keys = [k for k in cosmovisor_data.keys() if '/' in k]
+                    if platform_keys:
+                        logger.info(f"Found platform keys directly: {platform_keys}")
+                        binaries_data = {k: cosmovisor_data[k] for k in platform_keys}
                 
-                for platform, binary_info in cosmovisor_data['binaries'].items():
-                    # Handle different possible structures in cosmovisor.json
-                    if isinstance(binary_info, dict):
-                        checksum = binary_info.get('checksum', {})
-                        url = binary_info.get('url', '')
-                        
-                        if url and isinstance(checksum, dict) and 'algorithm' in checksum and 'value' in checksum:
-                            meta['codebase']['binaries'][platform] = f"{url}?checksum={checksum['algorithm']}:{checksum['value']}"
-                    elif isinstance(binary_info, str):
-                        # Handle case where binary_info is just a URL string
-                        meta['codebase']['binaries'][platform] = binary_info
+                if binaries_data and 'binaries' in meta['codebase']:
+                    new_binaries = {}
+                    
+                    for platform, binary_info in binaries_data.items():
+                        new_binaries[platform] = binary_info
+                    
+                    if new_binaries:
+                        meta['codebase']['binaries'] = new_binaries
+                    else:
+                        logger.error("No binaries were extracted from cosmovisor_data")
+                else:
+                    logger.info("No binaries data found in cosmovisor.json or meta.json")
         
-        # Check if there were any changes
-        if meta == orig_meta:
-            logger.info(f"No changes needed for meta.json")
+        # Check if there were any actual changes by comparing JSON strings
+        if json.dumps(meta, sort_keys=True) == json.dumps(orig_meta, sort_keys=True):
+            logger.info("No changes detected in meta.json after comparison")
             return False
+        else:
+            # Log what changed
+            for key in meta.get('codebase', {}):
+                if key in orig_meta.get('codebase', {}):
+                    if meta['codebase'][key] != orig_meta['codebase'][key]:
+                        logger.info(f"Change detected in {key}: {orig_meta['codebase'][key]} -> {meta['codebase'][key]}")
         
         # Write updated meta.json
         with open(meta_path, 'w') as f:
@@ -208,6 +231,8 @@ def update_meta_json(chain_id: str, version: str, cosmovisor_data: Dict) -> bool
     except Exception as e:
         logger.error(f"Error updating meta.json: {e}")
         logger.error(f"Exception details: {type(e).__name__}: {str(e)}")
+        import traceback
+        logger.error(traceback.format_exc())
         return False
 
 def update_readme(version: str, chain_id: str) -> bool:
