@@ -12,13 +12,15 @@
       "genesis_url": "https://raw.githubusercontent.com/MANTRA-Chain/net/main/mantra-dukong-1/genesis.json"
     },
     "git_repo": "github.com/MANTRA-Chain/mantrachain",
-    "recommended_version": "v3.0.0",
-    "compatible_versions": ["v3.0.0"],
+    "recommended_version": "v4.0.0",
+    "compatible_versions": [
+      "v4.0.0"
+    ],
     "binaries": {
-      "linux/amd64": "https://github.com/MANTRA-Chain/mantrachain/releases/download/v3.0.0/mantrachaind-3.0.0-linux-amd64.tar.gz?checksum=sha256:50ae2f624c477bc86272d5c2eeb53e0fdbc636211dd2af799a2b6c475afd90af",
-      "linux/arm64": "https://github.com/MANTRA-Chain/mantrachain/releases/download/v3.0.0/mantrachaind-3.0.0-linux-arm64.tar.gz?checksum=sha256:d03e6a1731d25521e5517a6145ed9bc59f5a1bd11377ab03fae24710914d9a34",
-      "darwin/amd64": "https://github.com/MANTRA-Chain/mantrachain/releases/download/v3.0.0/mantrachaind-3.0.0-darwin-amd64.tar.gz?checksum=sha256:fc7318fd834fe5b2912f309aec08aadbad085e7f220390d922cf8177542a4db0",
-      "darwin/arm64": "https://github.com/MANTRA-Chain/mantrachain/releases/download/v3.0.0/mantrachaind-3.0.0-darwin-arm64.tar.gz?checksum=sha256:607ed92b71d0db1b8abbf5282392e734c04de8ac3945d970bfbe83088766d0d3"
+      "linux/amd64": "https://github.com/MANTRA-Chain/mantrachain/releases/download/v4.0.0/mantrachaind-4.0.0-linux-amd64.tar.gz?checksum=sha256:617d8868fe2714218f7d3f711443c596ef00dbb4d42687b4e38d7b8b20b9db8a",
+      "linux/arm64": "https://github.com/MANTRA-Chain/mantrachain/releases/download/v4.0.0/mantrachaind-4.0.0-linux-arm64.tar.gz?checksum=sha256:64a77b9af2dbac9cd76931b27d499b0501c260b2b844907e8c4f07eb6c0472d1",
+      "darwin/amd64": "https://github.com/MANTRA-Chain/mantrachain/releases/download/v4.0.0/mantrachaind-4.0.0-darwin-amd64.tar.gz?checksum=sha256:a893f307578e3b2190d09a423ed2ffcd9885fadfe552590fcdec982e8a7cd8b4",
+      "darwin/arm64": "https://github.com/MANTRA-Chain/mantrachain/releases/download/v4.0.0/mantrachaind-4.0.0-darwin-arm64.tar.gz?checksum=sha256:bb6354d292044f1b8fab2f9972e4e2b2f946d65256b8fd3ea0a579b6aaffe03f"
     }
   },
   "fees": {
@@ -32,32 +34,32 @@
   "peers": {
     "seeds": [
       {
-      "id": "32276da966637722914411e16ca91bd37dcd1c28",
-      "address": "seed0.mantrachain.io:26656"
+        "id": "32276da966637722914411e16ca91bd37dcd1c28",
+        "address": "seed0.mantrachain.io:26656"
       },
       {
-      "id": "9f5235b418c87af4302619705d0bf4748249ca6b",
-      "address": "seed1.mantrachain.io:26656"
+        "id": "9f5235b418c87af4302619705d0bf4748249ca6b",
+        "address": "seed1.mantrachain.io:26656"
       },
       {
-      "id": "b0acfd505bb4bc0c39d095663d310c253de18210",
-      "address": "seed2.mantrachain.io:26656"
+        "id": "b0acfd505bb4bc0c39d095663d310c253de18210",
+        "address": "seed2.mantrachain.io:26656"
       },
       {
-      "id": "f153213f0fe5d3cbe6e1f75d7ac0b4a27e70d31b",
-      "address": "seed-mantra.r93axnodes.cloud:13156"
+        "id": "f153213f0fe5d3cbe6e1f75d7ac0b4a27e70d31b",
+        "address": "seed-mantra.r93axnodes.cloud:13156"
       },
       {
-      "id": "ebc272824924ea1a27ea3183dd0b9ba713494f83",
-      "address": "mantrachain-mainnet-seed.autostake.com:27536"
+        "id": "ebc272824924ea1a27ea3183dd0b9ba713494f83",
+        "address": "mantrachain-mainnet-seed.autostake.com:27536"
       },
       {
-      "id": "8542cd7e6bf9d260fef543bc49e59be5a3fa9074",
-      "address": "seed.publicnode.com:26656"
+        "id": "8542cd7e6bf9d260fef543bc49e59be5a3fa9074",
+        "address": "seed.publicnode.com:26656"
       },
       {
-      "id": "16ab08754dd0dc8b4d9202db16cb354ff618e3d9",
-      "address": "mantra-mainnet-seed.itrocket.net:22656"
+        "id": "16ab08754dd0dc8b4d9202db16cb354ff618e3d9",
+        "address": "mantra-mainnet-seed.itrocket.net:22656"
       }
     ],
     "persistent_peers": [
