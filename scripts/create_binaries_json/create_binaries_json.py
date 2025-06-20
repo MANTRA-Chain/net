@@ -59,7 +59,7 @@ def validate_chain_id(chain_id):
     return chain_id in ['mantra-1', 'mantra-dukong-1']
 
 def validate_tag(tag):
-    pattern = '^v[0-9]+.[0-9]+.[0-9]+$'
+    pattern = '^v[0-9]+.[0-9]+.[0-9]+(-rc[0-9]+)?$'
     return bool(re.match(pattern, tag))
 
 def major_tag(tag):
@@ -82,13 +82,22 @@ def checksums_to_binaries_json(checksums):
 
         # include only tar.gz files for mantrachaind
         if filename.endswith('.tar.gz') and filename.startswith('mantrachaind'):
-            try:
-                _, tag, platform, arch = filename.split('-')
-            except ValueError:
-                print(f"Error: Expected binary name in the form: mantrachaind-X.Y.Z-platform-architecture.tar.gz, but got {filename}")
+            parts = filename.replace('.tar.gz', '').split('-')
+            
+            # Handle both regular versions and rc versions
+            # mantrachaind-X.Y.Z-platform-architecture.tar.gz
+            # mantrachaind-X.Y.Z-rcN-platform-architecture.tar.gz
+            if len(parts) == 4:
+                # Regular version
+                _, tag, platform, arch = parts
+            elif len(parts) == 5:
+                # RC version (e.g., 5.0.0-rc0)
+                _, version, rc, platform, arch = parts
+                tag = f"{version}-{rc}"
+            else:
+                print(f"Error: Expected binary name in the form: mantrachaind-X.Y.Z-platform-architecture.tar.gz or mantrachaind-X.Y.Z-rcN-platform-architecture.tar.gz, but got {filename}")
                 sys.exit(1)
-            _, tag, platform, arch = filename.split('-')
-            arch = arch.split('.')[0]
+            
             # exclude universal binaries and windows binaries
             if arch == 'all' or platform == 'windows':
                 continue
