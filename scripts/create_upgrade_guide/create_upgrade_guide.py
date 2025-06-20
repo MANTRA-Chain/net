@@ -27,7 +27,7 @@ import sys
 
 
 def validate_tag(tag):
-    pattern = '^v[0-9]+.[0-9]+.[0-9]+$'
+    pattern = '^v[0-9]+.[0-9]+.[0-9]+(-rc[0-9]+)?$'
     return bool(re.match(pattern, tag))
 
 def validate_version(version):
