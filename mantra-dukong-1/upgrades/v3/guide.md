@@ -110,7 +110,7 @@ At the designated block height, Cosmovisor will automatically upgrade to version
 
 Follow these steps if you opt for a manual upgrade:
 
-1. Monitor Mantrachain until it reaches the specified upgrade block height: 2628000.
+1. Monitor Mantrachain until it reaches the specified upgrade block height: 3806000.
 2. Observe for a panic message followed by continuous peer logs, then halt the daemon.
 3. Perform these steps:
 

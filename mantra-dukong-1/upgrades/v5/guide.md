@@ -1,10 +1,10 @@
-# Mainnet Upgrade Guide: From Version v3 to v4
+# Testnet Upgrade Guide: From Version v4 to v5
 
 ## Overview
 
-- **v4 Proposal**: [Proposal Page](https://www.mintscan.io/mantra/proposals/12)
-- **v4 Upgrade Block Height**: 4428500
-- **v4 Upgrade Countdown**: [Block Countdown](https://www.mintscan.io/mantra/block/4428500)
+- **v5 Proposal**: [Proposal Page](https://www.mintscan.io/mantra-testnet/proposals/23)
+- **v5 Upgrade Block Height**: 6441500
+- **v5 Upgrade Countdown**: [Block Countdown](https://www.mintscan.io/mantra-testnet/block/6441500)
 
 ## Hardware Requirements
 
@@ -73,15 +73,15 @@ echo "export UNSAFE_SKIP_BACKUP=true" >> ~/.profile
 source ~/.profile
 ```
 
-### Upgrading to v4
+### Upgrading to v5
 
 _To prepare for the upgrade, execute these commands_:
 
 #### Approach 1: Download Pre-built Release
 
 ```sh
-upgrade_version="4.0.0"
-upgrade_name="v4"
+upgrade_version="5.0.0-rc0"
+upgrade_name="v5"
 mkdir -p ~/.mantrachain/cosmovisor/upgrades/$upgrade_name/bin
 if [[ $(uname -m) == 'arm64' ]] || [[ $(uname -m) == 'aarch64' ]]; then export ARCH="arm64"; else export ARCH="amd64"; fi
 if [[ $(uname) == 'Darwin' ]]; then export OS="darwin"; else export OS="linux"; fi
@@ -93,8 +93,8 @@ rm mantrachaind-$upgrade_version-$OS-$ARCH.tar.gz
 #### Approach 2: Build from Source
 
 ```sh
-upgrade_version="4.0.0"
-upgrade_name="v4"
+upgrade_version="5.0.0-rc0"
+upgrade_name="v5"
 mkdir -p ~/.mantrachain/cosmovisor/upgrades/$upgrade_name/bin
 cd $HOME/mantrachain
 git checkout v$upgrade_version
@@ -102,7 +102,7 @@ make build
 cp build/mantrachaind ~/.mantrachain/cosmovisor/upgrades/$upgrade_name/bin
 ```
 
-At the designated block height, Cosmovisor will automatically upgrade to version v4.
+At the designated block height, Cosmovisor will automatically upgrade to version v5.
 
 ---
 
@@ -110,15 +110,15 @@ At the designated block height, Cosmovisor will automatically upgrade to version
 
 Follow these steps if you opt for a manual upgrade:
 
-1. Monitor Mantrachain until it reaches the specified upgrade block height: 4428500.
+1. Monitor Mantrachain until it reaches the specified upgrade block height: 6441500.
 2. Observe for a panic message followed by continuous peer logs, then halt the daemon.
 3. Perform these steps:
 
 ### Approach 1: Download Pre-built Release
 
 ```sh
-upgrade_version="4.0.0"
-upgrade_name="v4"
+upgrade_version="5.0.0-rc0"
+upgrade_name="v5"
 if [[ $(uname -m) == 'arm64' ]] || [[ $(uname -m) == 'aarch64' ]]; then export ARCH="arm64"; else export ARCH="amd64"; fi
 if [[ $(uname) == 'Darwin' ]]; then export OS="darwin"; else export OS="linux"; fi
 wget https://github.com/MANTRA-Chain/mantrachain/releases/download/v$upgrade_version/mantrachaind-$upgrade_version-$OS-$ARCH.tar.gz
@@ -128,7 +128,7 @@ tar -xvf mantrachaind-$upgrade_version-$OS-$ARCH.tar.gz -C $GOPATH/bin
 ### Approach 2: Build from Source
 
 ```sh
-upgrade_version="4.0.0"
+upgrade_version="5.0.0-rc0"
 cd $HOME/mantrachain
 git pull
 git checkout v$upgrade_version
@@ -138,6 +138,27 @@ make install
 4. Restart the Mantrachain daemon and observe the upgrade.
 
 ---
+
+## 🚨 Extra EVM Configuration for v5 upgrade
+
+After upgrading to v5, you need to update your `app.toml` configuration file to enable EVM and JSON-RPC functionality.
+
+### Update app.toml
+
+Edit your `~/.mantrachain/config/app.toml` file and add or update the following sections:
+
+```toml
+[evm]
+evm-chain-id = 5887
+
+[json-rpc]
+enable = true # set to true if it is full node instead of validator
+address = "0.0.0.0:8545"
+ws-address = "0.0.0.0:8546"
+api = "eth,net,debug,web3"
+enable-indexer = true
+metrics-address = "0.0.0.0:6065"
+```
 
 ## Additional Resources
 
