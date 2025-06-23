@@ -55,12 +55,12 @@
     ],
     "rest": [
       {
-        "address": "https://mantra-testnet-rest.publicnode.com:443",
-        "provider": "Allnodes"
-      },
-      {
         "address": "https://api.dukong.mantrachain.io:443",
         "provider": "MANTRA"
+      },
+      {
+        "address": "https://mantra-testnet-rest.publicnode.com:443",
+        "provider": "Allnodes"
       }
     ],
     "grpc": [

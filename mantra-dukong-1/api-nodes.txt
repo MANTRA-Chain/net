@@ -1,2 +1,2 @@
-https://mantra-testnet-rest.publicnode.com
 https://api.dukong.mantrachain.io
+https://mantra-testnet-rest.publicnode.com
