@@ -12,15 +12,15 @@
       "genesis_url": "https://raw.githubusercontent.com/MANTRA-Chain/net/main/mantra-dukong-1/genesis.json"
     },
     "git_repo": "github.com/MANTRA-Chain/mantrachain",
-    "recommended_version": "v4.0.0",
+    "recommended_version": "v5.0.0-rc0",
     "compatible_versions": [
-      "v4.0.0"
+      "v5.0.0-rc0"
     ],
     "binaries": {
-      "linux/amd64": "https://github.com/MANTRA-Chain/mantrachain/releases/download/v4.0.0/mantrachaind-4.0.0-linux-amd64.tar.gz?checksum=sha256:617d8868fe2714218f7d3f711443c596ef00dbb4d42687b4e38d7b8b20b9db8a",
-      "linux/arm64": "https://github.com/MANTRA-Chain/mantrachain/releases/download/v4.0.0/mantrachaind-4.0.0-linux-arm64.tar.gz?checksum=sha256:64a77b9af2dbac9cd76931b27d499b0501c260b2b844907e8c4f07eb6c0472d1",
-      "darwin/amd64": "https://github.com/MANTRA-Chain/mantrachain/releases/download/v4.0.0/mantrachaind-4.0.0-darwin-amd64.tar.gz?checksum=sha256:a893f307578e3b2190d09a423ed2ffcd9885fadfe552590fcdec982e8a7cd8b4",
-      "darwin/arm64": "https://github.com/MANTRA-Chain/mantrachain/releases/download/v4.0.0/mantrachaind-4.0.0-darwin-arm64.tar.gz?checksum=sha256:bb6354d292044f1b8fab2f9972e4e2b2f946d65256b8fd3ea0a579b6aaffe03f"
+      "linux/amd64": "https://github.com/MANTRA-Chain/mantrachain/releases/download/v5.0.0-rc0/mantrachaind-5.0.0-rc0-linux-amd64.tar.gz?checksum=sha256:b125c537680758b51beb09f4368f6bdb7b72e9b3ad6b689e6ebc019c0c864723",
+      "linux/arm64": "https://github.com/MANTRA-Chain/mantrachain/releases/download/v5.0.0-rc0/mantrachaind-5.0.0-rc0-linux-arm64.tar.gz?checksum=sha256:a46e7204d0856a98009e89f6d6351db76a54ed902f8c63ecbd03533aeee6f3db",
+      "darwin/amd64": "https://github.com/MANTRA-Chain/mantrachain/releases/download/v5.0.0-rc0/mantrachaind-5.0.0-rc0-darwin-amd64.tar.gz?checksum=sha256:172520b68415c2c3b6ab7ff7b99e83f937954770c29aa044b9bbde5edccb904a",
+      "darwin/arm64": "https://github.com/MANTRA-Chain/mantrachain/releases/download/v5.0.0-rc0/mantrachaind-5.0.0-rc0-darwin-arm64.tar.gz?checksum=sha256:6839af9f2a97ad1cc1648b645f868d4c9baa60ad16aa9ce79f9a29b457e3d6dd"
     }
   },
   "fees": {
