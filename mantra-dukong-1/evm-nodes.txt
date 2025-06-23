@@ -1,0 +1,2 @@
+https://evm.dukong.mantrachain.io
+https://evm.dukong.mantrachain.io/ws
