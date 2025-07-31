@@ -62,7 +62,9 @@ def validate_tag(tag):
     pattern = '^v[0-9]+.[0-9]+.[0-9]+(-rc[0-9]+)?$'
     return bool(re.match(pattern, tag))
 
-def major_tag(tag):
+def major_tag(tag, upgrade_version):
+    if upgrade_version:
+        return upgrade_version
     return tag.split('.')[0]
 
 def download_checksums(checksums_url):
@@ -122,11 +124,17 @@ def main():
     parser.add_argument('--chain_id', metavar='chain_id', type=str, required=True, help='The Chain ID for which the binaries JSON is being generated (e.g., mantra-1|mantra-dukong-1)')
     parser.add_argument('--tag', metavar='tag', type=str, help='the tag to use (e.g v3.0.0)')
     parser.add_argument('--checksums_url', metavar='checksums_url', type=str, help='URL to the checksum')
+    parser.add_argument('--upgrade_version', metavar='upgrade_version', type=str, help='Upgrade version for output directory (optional)')
 
     args = parser.parse_args()
-    
+
+    # Treat empty strings as None
+    tag = args.tag if args.tag else None
+    checksums_url = args.checksums_url if args.checksums_url else None
+    upgrade_version = args.upgrade_version if args.upgrade_version else None
+
     # Validate the tag format
-    if args.tag and not validate_tag(args.tag):
+    if tag and not validate_tag(tag):
         print("Error: The provided tag does not follow the 'vX.Y.Z' format.")
         sys.exit(1)
         
@@ -135,18 +143,17 @@ def main():
         sys.exit(1)
 
     # Ensure that only one of --tag or --checksums_url is specified
-    if not bool(args.tag) ^ bool(args.checksums_url):
+    if not bool(tag) ^ bool(checksums_url):
         parser.error("Only one of tag or --checksums_url must be specified")
         sys.exit(1)
 
-    checksums_url = args.checksums_url if args.checksums_url else f"https://github.com/MANTRA-Chain/mantrachain/releases/download/{args.tag}/sha256sum.txt"
+    checksums_url = checksums_url if checksums_url else f"https://github.com/MANTRA-Chain/mantrachain/releases/download/{tag}/sha256sum.txt"
     checksums = download_checksums(checksums_url)
     binaries_json = checksums_to_binaries_json(checksums)
     print(binaries_json)
     
-    
     # Write the filled template to a file
-    output_directory = os.path.join(os.path.dirname(os.path.abspath(__file__)), '..', '..', args.chain_id, 'upgrades', major_tag(args.tag))
+    output_directory = os.path.join(os.path.dirname(os.path.abspath(__file__)), '..', '..', args.chain_id, 'upgrades', major_tag(tag, upgrade_version))
 
     os.makedirs(output_directory, exist_ok=True)
 

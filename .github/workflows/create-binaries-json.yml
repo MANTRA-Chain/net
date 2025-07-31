@@ -21,6 +21,9 @@ on:
       checksums_url:
         description: 'URL to checksums file (optional)'
         required: false
+      upgrade_version:
+        description: 'Upgrade version (e.g v3) default to major version of tag if not provided'
+        required: false
 
 jobs:
   create-binaries-json:
@@ -38,15 +41,11 @@ jobs:
 
       - name: Create binaries JSON
         run: |
-          if [ -n "${{ inputs.checksums_url }}" ]; then
-            python scripts/create_binaries_json/create_binaries_json.py \
-              --chain_id ${{ inputs.chain_id }} \
-              --checksums_url ${{ inputs.checksums_url }}
-          else
-            python scripts/create_binaries_json/create_binaries_json.py \
-              --chain_id ${{ inputs.chain_id }} \
-              --tag ${{ inputs.tag }}
-          fi
+          python scripts/create_binaries_json/create_binaries_json.py \
+            --chain_id "${{ inputs.chain_id }}" \
+            --tag "${{ inputs.tag }}" \
+            --checksums_url "${{ inputs.checksums_url }}" \
+            --upgrade_version "${{ inputs.upgrade_version }}"
 
       - name: Create Pull Request
         uses: peter-evans/create-pull-request@v7
