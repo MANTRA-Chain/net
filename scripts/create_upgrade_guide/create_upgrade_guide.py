@@ -31,8 +31,8 @@ def validate_tag(tag):
     return bool(re.match(pattern, tag))
 
 def validate_version(version):
-    # Regex to match 'v' followed by a number
-    pattern = '^v\d+$'
+    # Match vX or vX.Y.Z or vX.Y.Z-rcN
+    pattern = '^v(\d+|\d+\.\d+\.\d+(-rc\d+)?)$'
     return bool(re.match(pattern, version))
 
 def validate_chain_id(chain_id):
