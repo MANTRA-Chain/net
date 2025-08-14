@@ -5,6 +5,8 @@
 - **$UPGRADE_VERSION Proposal**: [Proposal Page](https://www.mintscan.io/$MINTSCAN_NETWORK/proposals/$PROPOSAL_ID)
 - **$UPGRADE_VERSION Upgrade Block Height**: $UPGRADE_BLOCK
 - **$UPGRADE_VERSION Upgrade Countdown**: [Block Countdown](https://www.mintscan.io/$MINTSCAN_NETWORK/block/$UPGRADE_BLOCK)
+- **$UPGRADE_VERSION Release**: [Release Page](https://github.com/MANTRA-Chain/mantrachain/releases/tag/v$UPGRADE_TAG_NUM)
+- **$UPGRADE_VERSION Docker Image**: [ghcr.io/mantra-chain/mantrachain:v$UPGRADE_TAG_NUM](https://github.com/mantra-chain/mantrachain/pkgs/container/mantrachain)
 
 ## Hardware Requirements
 
