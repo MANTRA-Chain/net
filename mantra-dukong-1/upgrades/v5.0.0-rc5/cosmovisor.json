@@ -1,0 +1,8 @@
+{
+  "binaries": {
+    "linux/amd64": "https://github.com/MANTRA-Chain/mantrachain/releases/download/v5.0.0-rc5/mantrachaind-5.0.0-rc5-linux-amd64.tar.gz?checksum=sha256:4e89ec39190e0738b90a0019dec7834e5be1aae2f0f54bcd7e9dead64316e041",
+    "linux/arm64": "https://github.com/MANTRA-Chain/mantrachain/releases/download/v5.0.0-rc5/mantrachaind-5.0.0-rc5-linux-arm64.tar.gz?checksum=sha256:80fcee254fa762d51932f691c1cde3a222c1bddad31a0e8c73e100a165d13c92",
+    "darwin/amd64": "https://github.com/MANTRA-Chain/mantrachain/releases/download/v5.0.0-rc5/mantrachaind-5.0.0-rc5-darwin-amd64.tar.gz?checksum=sha256:d54b151f252557b2392e9e2979f6d552394ea1187a73312a470cf13d947c16b3",
+    "darwin/arm64": "https://github.com/MANTRA-Chain/mantrachain/releases/download/v5.0.0-rc5/mantrachaind-5.0.0-rc5-darwin-arm64.tar.gz?checksum=sha256:58ec3fccf094b95de099ef2e4e9d508283bbdef6d1f3148e595246d6843b18e9"
+  }
+}
