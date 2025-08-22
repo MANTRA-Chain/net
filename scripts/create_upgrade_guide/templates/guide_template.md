@@ -99,6 +99,7 @@ upgrade_version="$UPGRADE_TAG_NUM"
 upgrade_name="$UPGRADE_VERSION"
 mkdir -p ~/.mantrachain/cosmovisor/upgrades/$upgrade_name/bin
 cd $HOME/mantrachain
+git fetch --tags
 git checkout v$upgrade_version
 make build
 cp build/mantrachaind ~/.mantrachain/cosmovisor/upgrades/$upgrade_name/bin
@@ -132,7 +133,7 @@ tar -xvf mantrachaind-$upgrade_version-$OS-$ARCH.tar.gz -C $GOPATH/bin
 ```sh
 upgrade_version="$UPGRADE_TAG_NUM"
 cd $HOME/mantrachain
-git pull
+git fetch --tags
 git checkout v$upgrade_version
 make install
 ```
