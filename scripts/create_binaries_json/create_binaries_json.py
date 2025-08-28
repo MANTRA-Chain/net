@@ -142,9 +142,14 @@ def main():
         print("Error: The provided chain_id is invalid.")
         sys.exit(1)
 
-    # Ensure that only one of --tag or --checksums_url is specified
-    if not bool(tag) ^ bool(checksums_url):
-        parser.error("Only one of tag or --checksums_url must be specified")
+    # Require at least one of --tag or --checksums_url
+    if not tag and not checksums_url:
+        parser.error("Provide at least one of --tag or --checksums_url")
+        sys.exit(1)
+
+    # Also require either --tag or --upgrade_version to determine the output directory
+    if not (tag or upgrade_version):
+        parser.error("Either --tag or --upgrade_version must be provided to determine the output directory.")
         sys.exit(1)
 
     checksums_url = checksums_url if checksums_url else f"https://github.com/MANTRA-Chain/mantrachain/releases/download/{tag}/sha256sum.txt"
