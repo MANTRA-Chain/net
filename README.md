@@ -19,7 +19,8 @@ Each directory includes, at a minimum:
 | `chain-id.txt`     | The "chain-id" of the network.                                                     |
 | `genesis.json`     | The genesis file for the network.                                                  |
 | `seed-nodes.txt`   | A list of seed node addresses for the network.                                     |
-| `rpc-nodes.txt`    | A list of RPC node addresses for the network.                                      |
+| `rpc-nodes.txt`    | A list of COSMOS RPC node addresses for the network.                               |
+| `evm-rpc-nodes.txt`| A list of EVM RPC node addresses for the network.                                  |
 | `api-nodes.txt`    | A list of API (LCD) node addresses for the network.                                |
 | `explorer-url.txt` | The URL of an explorer UI for the network.                                         |
 
