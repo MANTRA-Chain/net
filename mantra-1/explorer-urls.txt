@@ -2,3 +2,4 @@ https://www.mintscan.io/mantra
 https://mainnet.itrocket.net/mantra
 https://explorer.stavr.tech/Mantra-Mainnet
 https://explorer.mantrachain.io/MANTRA-1
+https://mantrascan.io/mainnet
