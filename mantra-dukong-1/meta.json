@@ -12,15 +12,15 @@
       "genesis_url": "https://raw.githubusercontent.com/MANTRA-Chain/net/main/mantra-dukong-1/genesis.json"
     },
     "git_repo": "github.com/MANTRA-Chain/mantrachain",
-    "recommended_version": "v5.0.0-rc0",
+    "recommended_version": "v5.0.0-rc9",
     "compatible_versions": [
-      "v5.0.0-rc0"
+      "v5.0.0-rc9"
     ],
     "binaries": {
-      "linux/amd64": "https://github.com/MANTRA-Chain/mantrachain/releases/download/v5.0.0-rc0/mantrachaind-5.0.0-rc0-linux-amd64.tar.gz?checksum=sha256:b125c537680758b51beb09f4368f6bdb7b72e9b3ad6b689e6ebc019c0c864723",
-      "linux/arm64": "https://github.com/MANTRA-Chain/mantrachain/releases/download/v5.0.0-rc0/mantrachaind-5.0.0-rc0-linux-arm64.tar.gz?checksum=sha256:a46e7204d0856a98009e89f6d6351db76a54ed902f8c63ecbd03533aeee6f3db",
-      "darwin/amd64": "https://github.com/MANTRA-Chain/mantrachain/releases/download/v5.0.0-rc0/mantrachaind-5.0.0-rc0-darwin-amd64.tar.gz?checksum=sha256:172520b68415c2c3b6ab7ff7b99e83f937954770c29aa044b9bbde5edccb904a",
-      "darwin/arm64": "https://github.com/MANTRA-Chain/mantrachain/releases/download/v5.0.0-rc0/mantrachaind-5.0.0-rc0-darwin-arm64.tar.gz?checksum=sha256:6839af9f2a97ad1cc1648b645f868d4c9baa60ad16aa9ce79f9a29b457e3d6dd"
+      "linux/amd64": "https://github.com/MANTRA-Chain/mantrachain/releases/download/v5.0.0-rc9/mantrachaind-5.0.0-rc9-linux-amd64.tar.gz?checksum=sha256:24f626df38dffb9c035727618250df5eb9429bd6a909721f52c7d0e0eee37e1c",
+      "linux/arm64": "https://github.com/MANTRA-Chain/mantrachain/releases/download/v5.0.0-rc9/mantrachaind-5.0.0-rc9-linux-arm64.tar.gz?checksum=sha256:52c374365e1ef5fb863c9a00a06c353c09cf5d962b1337448b6210ac4d2a08da",
+      "darwin/amd64": "https://github.com/MANTRA-Chain/mantrachain/releases/download/v5.0.0-rc9/mantrachaind-5.0.0-rc9-darwin-amd64.tar.gz?checksum=sha256:f3b64592a9926c8e51715bd230028e09cef6873adb8032ad942fef1b84eaf572",
+      "darwin/arm64": "https://github.com/MANTRA-Chain/mantrachain/releases/download/v5.0.0-rc9/mantrachaind-5.0.0-rc9-darwin-arm64.tar.gz?checksum=sha256:45da0547d0341cf9d1d61fa73c8e2acc85690aa714fe597f2ab6201dfdd705cb"
     }
   },
   "fees": {

@@ -6,6 +6,7 @@ import requests
 import logging
 from pathlib import Path
 from typing import Dict, List, Optional, Tuple
+from packaging.version import parse as parse_version
 
 # Setup logging
 logging.basicConfig(level=logging.INFO, 
@@ -36,32 +37,42 @@ def parse_readme() -> List[str]:
     return chain_ids
 
 def find_latest_upgrade(chain_id: str) -> Optional[Tuple[str, Path]]:
-    """Find the latest upgrade directory and guide.md file"""
+    """Select the upgrade directory whose guide.md declares the highest Upgrade Block Height.
+    Falls back to None if no valid guide.md with a parsable height is found.
+    """
     upgrades_path = REPO_ROOT / chain_id / "upgrades"
     if not upgrades_path.exists():
         logger.info(f"No upgrades directory found for {chain_id}")
         return None
-    
-    # List upgrade directories and sort them to find the latest
-    upgrade_dirs = [d for d in upgrades_path.iterdir() if d.is_dir()]
-    
-    # Sort by version number (v2, v3, v4, etc.)
-    # This assumes directory names follow the pattern 'vX' where X is a number
-    upgrade_dirs.sort(key=lambda d: int(d.name[1:]) if d.name[1:].isdigit() else 0, reverse=True)
-    
-    if not upgrade_dirs:
-        logger.info(f"No upgrade directories found for {chain_id}")
+
+    candidates = []  # (height, dir_path, guide_path)
+    for d in upgrades_path.iterdir():
+        if not d.is_dir():
+            continue
+        guide_path = d / "guide.md"
+        if not guide_path.exists():
+            continue
+        try:
+            with open(guide_path, 'r') as f:
+                content = f.read()
+            m = re.search(r'Upgrade Block Height\*\*:\s*(\d+)', content)
+            if m:
+                height = int(m.group(1))
+                candidates.append((height, d, guide_path))
+            else:
+                logger.debug(f"No upgrade height found in {guide_path}")
+        except Exception as e:
+            logger.warning(f"Error reading {guide_path}: {e}")
+
+    if not candidates:
+        logger.info(f"No valid upgrade guides with heights found for {chain_id}")
         return None
-    
-    latest_upgrade = upgrade_dirs[0]
-    guide_path = latest_upgrade / "guide.md"
-    
-    if not guide_path.exists():
-        logger.info(f"No guide.md found in {latest_upgrade}")
-        return None
-    
-    logger.info(f"Found latest upgrade: {latest_upgrade.name} for {chain_id}")
-    return (latest_upgrade.name, guide_path)
+
+    # Pick the directory with the maximum height
+    candidates.sort(key=lambda x: x[0], reverse=True)
+    height, directory, guide_path = candidates[0]
+    logger.info(f"Selected upgrade {directory.name} (height {height}) for {chain_id}")
+    return (directory.name, guide_path)
 
 def extract_upgrade_info(guide_path: Path) -> Dict:
     """Extract upgrade block height and version from guide.md"""

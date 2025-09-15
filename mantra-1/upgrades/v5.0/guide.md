@@ -142,6 +142,30 @@ make install
 
 ---
 
+## 🚨 Extra EVM Configuration for v5.0 upgrade
+
+Before upgrading to v5.0, you need to update your `app.toml` configuration file to enable EVM and JSON-RPC functionality.
+
+### Update app.toml
+
+Edit your `~/.mantrachain/config/app.toml` file and add or update the following sections:
+
+```toml
+[mempool]
+max-txs = -1
+
+[evm]
+evm-chain-id = 5888
+
+[json-rpc]
+enable = true # set to true if it is full node instead of validator
+address = "0.0.0.0:8545"
+ws-address = "0.0.0.0:8546"
+api = "eth,net,debug,web3"
+enable-indexer = true
+metrics-address = "0.0.0.0:6065"
+```
+
 ## Additional Resources
 
 If you need more help, please:
