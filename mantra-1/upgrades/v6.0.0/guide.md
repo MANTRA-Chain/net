@@ -142,6 +142,42 @@ make install
 
 ---
 
+## 🚨 Optional EVM Mempool Configuration for v6.0.0
+
+The v6.0.0 release introduces the experimental Cosmos EVM mempool. You can optionally tune mempool behaviour ahead of the upgrade.
+
+### Optional app.toml updates
+
+Adjust `~/.mantrachain/config/app.toml` only if custom limits are required:
+
+```toml
+[mempool]
+# Setting max-txs to 0 will allow for a unbounded amount of transactions in the mempool.
+# Setting max_txs to negative 1 (-1) will disable transactions from being inserted into the mempool (no-op mempool).
+# Setting max_txs to a positive number (> 0) will limit the number of transactions in the mempool, by the specified amount.
+max-txs = 0
+
+[evm]
+evm-chain-id = 5888
+
+[evm.mempool]
+# PriceLimit is the minimum gas price to enforce for acceptance into the pool (in wei)
+price-limit = 1
+# PriceBump is the minimum price bump percentage to replace an already existing transaction (nonce)
+price-bump = 10
+# AccountSlots is the number of executable transaction slots guaranteed per account
+account-slots = 16
+# GlobalSlots is the maximum number of executable transaction slots for all accounts
+global-slots = 5120
+# AccountQueue is the maximum number of non-executable transaction slots permitted per account
+account-queue = 64
+# GlobalQueue is the maximum number of non-executable transaction slots for all accounts
+global-queue = 1024
+# Lifetime is the maximum amount of time non-executable transaction are queued
+lifetime = "3h0m0s"
+```
+
+
 ## Additional Resources
 
 If you need more help, please:
