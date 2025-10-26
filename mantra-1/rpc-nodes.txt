@@ -1,6 +1,4 @@
 https://rpc-mantra.r93axnodes.cloud:443
 https://mantra-mainnet-rpc.itrocket.net:443
-https://mantrachain-mainnet-rpc.autostake.com:443
 https://rpc.mantrachain.io:443
 https://mantra.rpc.m.stavr.tech:443
-https://mantra-rpc.publicnode.com:443

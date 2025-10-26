@@ -50,23 +50,11 @@
         "address": "seed-mantra.r93axnodes.cloud:13156"
       },
       {
-        "id": "ebc272824924ea1a27ea3183dd0b9ba713494f83",
-        "address": "mantrachain-mainnet-seed.autostake.com:27536"
-      },
-      {
-        "id": "8542cd7e6bf9d260fef543bc49e59be5a3fa9074",
-        "address": "seed.publicnode.com:26656"
-      },
-      {
         "id": "16ab08754dd0dc8b4d9202db16cb354ff618e3d9",
         "address": "mantra-mainnet-seed.itrocket.net:22656"
       }
     ],
     "persistent_peers": [
-      {
-        "id": "ebc272824924ea1a27ea3183dd0b9ba713494f83",
-        "address": "mantrachain-mainnet-peer.autostake.com:27536"
-      },
       {
         "id": "5cb41a850a2d41a28ff908e0e984a2a8deb7498a",
         "address": "mantra-mainnet-peer.itrocket.net:22656"
@@ -98,27 +86,13 @@
         "address": "https://mantra-mainnet-rpc.itrocket.net:443"
       },
       {
-        "address": "https://mantrachain-mainnet-rpc.autostake.com:443"
-      },
-      {
         "address": "https://rpc.mantrachain.io:443"
       },
       {
         "address": "https://mantra.rpc.m.stavr.tech:443"
-      },
-      {
-        "address": "https://mantra-rpc.publicnode.com:443"
       }
     ],
     "rest": [
-      {
-        "address": "https://mantra-rest.publicnode.com",
-        "provider": "Allnodes"
-      },
-      {
-        "address": "https://mantrachain-mainnet-lcd.autostake.com:443",
-        "provider": "AutoStake"
-      },
       {
         "address": "https://mantra-mainnet-api.itrocket.net",
         "provider": "ITRocket"
@@ -137,14 +111,6 @@
       }
     ],
     "grpc": [
-      {
-        "address": "mantra-grpc.publicnode.com:443",
-        "provider": "Allnodes"
-      },
-      {
-        "address": "mantrachain-mainnet-rpc.autostake.com:443",
-        "provider": "AutoStake"
-      },
       {
         "address": "mantra-mainnet-grpc.itrocket.net:443",
         "provider": "ITRocket"

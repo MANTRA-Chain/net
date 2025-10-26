@@ -2,6 +2,4 @@
 9f5235b418c87af4302619705d0bf4748249ca6b@seed1.mantrachain.io:26656
 b0acfd505bb4bc0c39d095663d310c253de18210@seed2.mantrachain.io:26656
 f153213f0fe5d3cbe6e1f75d7ac0b4a27e70d31b@seed-mantra.r93axnodes.cloud:13156
-ebc272824924ea1a27ea3183dd0b9ba713494f83@mantrachain-mainnet-seed.autostake.com:27536
-8542cd7e6bf9d260fef543bc49e59be5a3fa9074@seed.publicnode.com:26656
 16ab08754dd0dc8b4d9202db16cb354ff618e3d9@mantra-mainnet-seed.itrocket.net:22656

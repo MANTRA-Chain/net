@@ -1,6 +1,4 @@
 https://mantra.api.m.stavr.tech
-https://mantrachain-mainnet-lcd.autostake.com:443
 https://mantra-mainnet-api.itrocket.net
 https://api.mantrachain.io
-https://mantra-rest.publicnode.com
 https://api-mantra.r93axnodes.cloud:443

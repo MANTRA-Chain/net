@@ -1,2 +1,1 @@
-https://mantra-testnet-rpc.publicnode.com
 https://rpc.dukong.mantrachain.io

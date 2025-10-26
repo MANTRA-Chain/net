@@ -12,15 +12,15 @@
       "genesis_url": "https://raw.githubusercontent.com/MANTRA-Chain/net/main/mantra-dukong-1/genesis.json"
     },
     "git_repo": "github.com/MANTRA-Chain/mantrachain",
-    "recommended_version": "v5.0.0-rc9",
+    "recommended_version": "v6.0.0-rc0",
     "compatible_versions": [
-      "v5.0.0-rc9"
+      "v6.0.0-rc0"
     ],
     "binaries": {
-      "linux/amd64": "https://github.com/MANTRA-Chain/mantrachain/releases/download/v5.0.0-rc9/mantrachaind-5.0.0-rc9-linux-amd64.tar.gz?checksum=sha256:24f626df38dffb9c035727618250df5eb9429bd6a909721f52c7d0e0eee37e1c",
-      "linux/arm64": "https://github.com/MANTRA-Chain/mantrachain/releases/download/v5.0.0-rc9/mantrachaind-5.0.0-rc9-linux-arm64.tar.gz?checksum=sha256:52c374365e1ef5fb863c9a00a06c353c09cf5d962b1337448b6210ac4d2a08da",
-      "darwin/amd64": "https://github.com/MANTRA-Chain/mantrachain/releases/download/v5.0.0-rc9/mantrachaind-5.0.0-rc9-darwin-amd64.tar.gz?checksum=sha256:f3b64592a9926c8e51715bd230028e09cef6873adb8032ad942fef1b84eaf572",
-      "darwin/arm64": "https://github.com/MANTRA-Chain/mantrachain/releases/download/v5.0.0-rc9/mantrachaind-5.0.0-rc9-darwin-arm64.tar.gz?checksum=sha256:45da0547d0341cf9d1d61fa73c8e2acc85690aa714fe597f2ab6201dfdd705cb"
+      "linux/amd64": "https://github.com/MANTRA-Chain/mantrachain/releases/download/v6.0.0-rc0/mantrachaind-6.0.0-rc0-linux-amd64.tar.gz?checksum=sha256:a6b62b76fd0b7aa7c58929c5de138aa6b8f312c416df4630147205457d8f31a7",
+      "linux/arm64": "https://github.com/MANTRA-Chain/mantrachain/releases/download/v6.0.0-rc0/mantrachaind-6.0.0-rc0-linux-arm64.tar.gz?checksum=sha256:aba235d96f4871ef81deef2cdc93f1a499e8f9263434b050e8b6e339fb9a0a97",
+      "darwin/amd64": "https://github.com/MANTRA-Chain/mantrachain/releases/download/v6.0.0-rc0/mantrachaind-6.0.0-rc0-darwin-amd64.tar.gz?checksum=sha256:b7ede3bc889d7fb57840b16c669107309570b44cc4d53e1516aaeb10325a391b",
+      "darwin/arm64": "https://github.com/MANTRA-Chain/mantrachain/releases/download/v6.0.0-rc0/mantrachaind-6.0.0-rc0-darwin-arm64.tar.gz?checksum=sha256:4775b954b40633620457b03a18f70b2cf09862bdd83cfeb43d7fd9c4af269672"
     }
   },
   "fees": {
@@ -36,10 +36,6 @@
       {
         "id": "7e061edecef73a700b699c785f61a44ca981ff7f",
         "address": "seed0.dukong.mantrachain.io:26656"
-      },
-      {
-        "id": "8542cd7e6bf9d260fef543bc49e59be5a3fa9074",
-        "address": "seed.publicnode.com:26656"
       }
     ],
     "persistent_peers": []
@@ -48,26 +44,15 @@
     "rpc": [
       {
         "address": "https://rpc.dukong.mantrachain.io:443"
-      },
-      {
-        "address": "https://mantra-testnet-rpc.publicnode.com:443"
       }
     ],
     "rest": [
       {
         "address": "https://api.dukong.mantrachain.io:443",
         "provider": "MANTRA"
-      },
-      {
-        "address": "https://mantra-testnet-rest.publicnode.com:443",
-        "provider": "Allnodes"
       }
     ],
     "grpc": [
-      {
-        "address": "mantra-testnet-grpc.publicnode.com:443",
-        "provider": "Allnodes"
-      },
       {
         "address": "grpc.dukong.mantrachain.io:443",
         "provider": "MANTRA"
