@@ -6,7 +6,7 @@ import requests
 import logging
 from pathlib import Path
 from typing import Dict, List, Optional, Tuple
-from packaging.version import parse as parse_version
+# from packaging.version import parse as parse_version
 
 # Setup logging
 logging.basicConfig(level=logging.INFO, 
@@ -258,7 +258,7 @@ def update_readme(version: str, chain_id: str) -> bool:
         network_type = "mainnet" if chain_id == "mantra-1" else "testnet"
         
         # Update version in the table
-        pattern = rf'\[{network_type}\]\([^)]+\)\s*\|\s*:heavy_check_mark:\s*\|\s*v[0-9]+ \(([0-9.]+)\)'
+        pattern = rf'\[{network_type}\]\([^)]+\)\s*\|\s*:heavy_check_mark:\s*\|\s*v[0-9]+ \(([0-9A-Za-z.\-]+)\)'
         replacement = f"[{network_type}]({chain_id}) | :heavy_check_mark: | v{version.split('.')[0]} ({version})"
         
         new_content = re.sub(pattern, replacement, content)
