@@ -12,15 +12,15 @@
       "genesis_url": "https://raw.githubusercontent.com/MANTRA-Chain/net/main/mantra-dukong-1/genesis.json"
     },
     "git_repo": "github.com/MANTRA-Chain/mantrachain",
-    "recommended_version": "v4.0.0",
+    "recommended_version": "v6.0.0",
     "compatible_versions": [
-      "v4.0.0"
+      "v6.0.0"
     ],
     "binaries": {
-      "linux/amd64": "https://github.com/MANTRA-Chain/mantrachain/releases/download/v4.0.0/mantrachaind-4.0.0-linux-amd64.tar.gz?checksum=sha256:617d8868fe2714218f7d3f711443c596ef00dbb4d42687b4e38d7b8b20b9db8a",
-      "linux/arm64": "https://github.com/MANTRA-Chain/mantrachain/releases/download/v4.0.0/mantrachaind-4.0.0-linux-arm64.tar.gz?checksum=sha256:64a77b9af2dbac9cd76931b27d499b0501c260b2b844907e8c4f07eb6c0472d1",
-      "darwin/amd64": "https://github.com/MANTRA-Chain/mantrachain/releases/download/v4.0.0/mantrachaind-4.0.0-darwin-amd64.tar.gz?checksum=sha256:a893f307578e3b2190d09a423ed2ffcd9885fadfe552590fcdec982e8a7cd8b4",
-      "darwin/arm64": "https://github.com/MANTRA-Chain/mantrachain/releases/download/v4.0.0/mantrachaind-4.0.0-darwin-arm64.tar.gz?checksum=sha256:bb6354d292044f1b8fab2f9972e4e2b2f946d65256b8fd3ea0a579b6aaffe03f"
+      "linux/amd64": "https://github.com/MANTRA-Chain/mantrachain/releases/download/v6.0.0/mantrachaind-6.0.0-linux-amd64.tar.gz?checksum=sha256:04e4053230e4fda4ea8ebdbce7f8a96d6c50469b3e9762aaf579ffb2494809c6",
+      "linux/arm64": "https://github.com/MANTRA-Chain/mantrachain/releases/download/v6.0.0/mantrachaind-6.0.0-linux-arm64.tar.gz?checksum=sha256:79288ecb72974b5cb3a28486c22b5fc9ca8369bc0c7a6d000e98ad3164b37eb4",
+      "darwin/amd64": "https://github.com/MANTRA-Chain/mantrachain/releases/download/v6.0.0/mantrachaind-6.0.0-darwin-amd64.tar.gz?checksum=sha256:a4d2a54e237f26010bff6645b9cd182462ca59a7a6e313089ba1ffecf441c8e7",
+      "darwin/arm64": "https://github.com/MANTRA-Chain/mantrachain/releases/download/v6.0.0/mantrachaind-6.0.0-darwin-arm64.tar.gz?checksum=sha256:e83d73d492d211b3a35f4f28db61932c5d9360b820b84000409be894185bc6dd"
     }
   },
   "fees": {
