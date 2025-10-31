@@ -7,7 +7,7 @@ In general, there will be three networks available at any given time:
 | Network                    | Status             | Network version (binary version) | Description                                            |
 | -------------------------- | ------------------ | -------------------------------- | ------------------------------------------------------ |
 | [mainnet](mantra-1) | :heavy_check_mark: | v6 (6.0.0)                       | Mantrachain Network mainnet network.                   |
-| [testnet](mantra-dukong-1) | :heavy_check_mark: | v6 (6.0.0-rc0)                       | Mantrachain Network testnet network.                   |
+| [testnet](mantra-dukong-1) | :heavy_check_mark: | v6 (6.1.0)                       | Mantrachain Network testnet network.                   |
 
 
 Each network has a corresponding directory (linked to above) containing network information.
