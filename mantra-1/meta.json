@@ -12,15 +12,15 @@
       "genesis_url": "https://raw.githubusercontent.com/MANTRA-Chain/net/main/mantra-dukong-1/genesis.json"
     },
     "git_repo": "github.com/MANTRA-Chain/mantrachain",
-    "recommended_version": "v6.0.0",
+    "recommended_version": "v6.1.0",
     "compatible_versions": [
-      "v6.0.0"
+      "v6.1.0"
     ],
     "binaries": {
-      "linux/amd64": "https://github.com/MANTRA-Chain/mantrachain/releases/download/v6.0.0/mantrachaind-6.0.0-linux-amd64.tar.gz?checksum=sha256:04e4053230e4fda4ea8ebdbce7f8a96d6c50469b3e9762aaf579ffb2494809c6",
-      "linux/arm64": "https://github.com/MANTRA-Chain/mantrachain/releases/download/v6.0.0/mantrachaind-6.0.0-linux-arm64.tar.gz?checksum=sha256:79288ecb72974b5cb3a28486c22b5fc9ca8369bc0c7a6d000e98ad3164b37eb4",
-      "darwin/amd64": "https://github.com/MANTRA-Chain/mantrachain/releases/download/v6.0.0/mantrachaind-6.0.0-darwin-amd64.tar.gz?checksum=sha256:a4d2a54e237f26010bff6645b9cd182462ca59a7a6e313089ba1ffecf441c8e7",
-      "darwin/arm64": "https://github.com/MANTRA-Chain/mantrachain/releases/download/v6.0.0/mantrachaind-6.0.0-darwin-arm64.tar.gz?checksum=sha256:e83d73d492d211b3a35f4f28db61932c5d9360b820b84000409be894185bc6dd"
+      "linux/amd64": "https://github.com/MANTRA-Chain/mantrachain/releases/download/v6.1.0/mantrachaind-6.1.0-linux-amd64.tar.gz?checksum=sha256:a45cdb87b2948ccd54a6f7692d09117964c7c2805e94a7b77f8823bf67dc26b1",
+      "linux/arm64": "https://github.com/MANTRA-Chain/mantrachain/releases/download/v6.1.0/mantrachaind-6.1.0-linux-arm64.tar.gz?checksum=sha256:ca1bc9501630fed2ca348950033bcc287daec6e6f70527646342427dec98be67",
+      "darwin/amd64": "https://github.com/MANTRA-Chain/mantrachain/releases/download/v6.1.0/mantrachaind-6.1.0-darwin-amd64.tar.gz?checksum=sha256:9d2794775e3aa772265a29bef594d6d1527ed6d29e354f2391fe1a276facce6b",
+      "darwin/arm64": "https://github.com/MANTRA-Chain/mantrachain/releases/download/v6.1.0/mantrachaind-6.1.0-darwin-arm64.tar.gz?checksum=sha256:e92777f77952e7851c8d42209e6ec21b5fa40a73b7c576a8a88e1a35e42eaeb5"
     }
   },
   "fees": {
