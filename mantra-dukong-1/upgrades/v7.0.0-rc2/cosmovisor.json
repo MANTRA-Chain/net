@@ -1,8 +1,8 @@
 {
   "binaries": {
-    "linux/amd64": "https://github.com/MANTRA-Chain/mantrachain/releases/download/v7.0.0-rc2/mantrachaind-7.0.0-rc2-linux-amd64.tar.gz?checksum=sha256:b375bd05da2851a10bb3a79f1c759bf343a52966b6415dc258cf0d2758cde11d",
-    "linux/arm64": "https://github.com/MANTRA-Chain/mantrachain/releases/download/v7.0.0-rc2/mantrachaind-7.0.0-rc2-linux-arm64.tar.gz?checksum=sha256:a7ca8321dce211d96f3f70246c3215f693da407a2243f25063307892d047f503",
-    "darwin/amd64": "https://github.com/MANTRA-Chain/mantrachain/releases/download/v7.0.0-rc2/mantrachaind-7.0.0-rc2-darwin-amd64.tar.gz?checksum=sha256:d6ecef12e43481bebb409696b661c3a54fc155dcb6bbb51c035005d0d577fa6d",
-    "darwin/arm64": "https://github.com/MANTRA-Chain/mantrachain/releases/download/v7.0.0-rc2/mantrachaind-7.0.0-rc2-darwin-arm64.tar.gz?checksum=sha256:5d261de8a6d7412a6026dfa97af466e84b4d21164f1281d6f23d92339eabaeff"
+    "linux/amd64": "https://github.com/MANTRA-Chain/mantrachain/releases/download/v7.0.0-rc2.hotfix.0/mantrachaind-7.0.0-rc2.hotfix.0-linux-amd64.tar.gz?checksum=sha256:c5844252206974c00564c8f828a3c4ef73d7b2692ac431ca68a28d1140078b6f",
+    "linux/arm64": "https://github.com/MANTRA-Chain/mantrachain/releases/download/v7.0.0-rc2.hotfix.0/mantrachaind-7.0.0-rc2.hotfix.0-linux-arm64.tar.gz?checksum=sha256:9f8fea55117ec92cf10fa4c9bcaf1df67382d28ea616fed2b755559ce7ea3afb",
+    "darwin/amd64": "https://github.com/MANTRA-Chain/mantrachain/releases/download/v7.0.0-rc2.hotfix.0/mantrachaind-7.0.0-rc2.hotfix.0-darwin-amd64.tar.gz?checksum=sha256:e92ea6399fe22d39c556d00d3688723425145bb7dcfd18b9f209fdaa5e2a10ff",
+    "darwin/arm64": "https://github.com/MANTRA-Chain/mantrachain/releases/download/v7.0.0-rc2.hotfix.0/mantrachaind-7.0.0-rc2.hotfix.0-darwin-arm64.tar.gz?checksum=sha256:e1cdefda719ca26774079dedcbec280c40db0c4809c5f79a79778a95b2c460d1"
   }
 }

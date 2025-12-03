@@ -5,8 +5,8 @@
 - **v7.0.0-rc2 Proposal**: [Proposal Page](https://www.mintscan.io/mantra-testnet/proposals/34)
 - **v7.0.0-rc2 Upgrade Block Height**: 10234888
 - **v7.0.0-rc2 Upgrade Countdown**: [Block Countdown](https://www.mintscan.io/mantra-testnet/block/10234888)
-- **v7.0.0-rc2 Release**: [Release Page](https://github.com/MANTRA-Chain/mantrachain/releases/tag/v7.0.0-rc2)
-- **v7.0.0-rc2 Docker Image**: [ghcr.io/mantra-chain/mantrachain:v7.0.0-rc2](https://github.com/mantra-chain/mantrachain/pkgs/container/mantrachain)
+- **v7.0.0-rc2.hotfix.0 Release**: [Release Page](https://github.com/MANTRA-Chain/mantrachain/releases/tag/v7.0.0-rc2.hotfix.0)
+- **v7.0.0-rc2.hotfix.0 Docker Image**: [ghcr.io/mantra-chain/mantrachain:v7.0.0-rc2.hotfix.0](https://github.com/mantra-chain/mantrachain/pkgs/container/mantrachain)
 
 ## Hardware Requirements
 
@@ -82,7 +82,7 @@ _To prepare for the upgrade, execute these commands_:
 #### Approach 1: Download Pre-built Release
 
 ```sh
-upgrade_version="7.0.0-rc2"
+upgrade_version="7.0.0-rc2.hotfix.0"
 upgrade_name="v7.0.0-rc2"
 mkdir -p ~/.mantrachain/cosmovisor/upgrades/$upgrade_name/bin
 if [[ $(uname -m) == 'arm64' ]] || [[ $(uname -m) == 'aarch64' ]]; then export ARCH="arm64"; else export ARCH="amd64"; fi
@@ -95,7 +95,7 @@ rm mantrachaind-$upgrade_version-$OS-$ARCH.tar.gz
 #### Approach 2: Build from Source
 
 ```sh
-upgrade_version="7.0.0-rc2"
+upgrade_version="7.0.0-rc2.hotfix.0"
 upgrade_name="v7.0.0-rc2"
 mkdir -p ~/.mantrachain/cosmovisor/upgrades/$upgrade_name/bin
 cd $HOME/mantrachain
@@ -120,7 +120,7 @@ Follow these steps if you opt for a manual upgrade:
 ### Approach 1: Download Pre-built Release
 
 ```sh
-upgrade_version="7.0.0-rc2"
+upgrade_version="7.0.0-rc2.hotfix.0"
 upgrade_name="v7.0.0-rc2"
 if [[ $(uname -m) == 'arm64' ]] || [[ $(uname -m) == 'aarch64' ]]; then export ARCH="arm64"; else export ARCH="amd64"; fi
 if [[ $(uname) == 'Darwin' ]]; then export OS="darwin"; else export OS="linux"; fi
@@ -131,7 +131,7 @@ tar -xvf mantrachaind-$upgrade_version-$OS-$ARCH.tar.gz -C $GOPATH/bin
 ### Approach 2: Build from Source
 
 ```sh
-upgrade_version="7.0.0-rc2"
+upgrade_version="7.0.0-rc2.hotfix.0"
 cd $HOME/mantrachain
 git fetch --tags
 git checkout v$upgrade_version
