@@ -12,15 +12,15 @@
       "genesis_url": "https://raw.githubusercontent.com/MANTRA-Chain/net/main/mantra-dukong-1/genesis.json"
     },
     "git_repo": "github.com/MANTRA-Chain/mantrachain",
-    "recommended_version": "v6.1.0",
+    "recommended_version": "v7.0.0-rc2.hotfix.0",
     "compatible_versions": [
-      "v6.1.0"
+      "v7.0.0-rc2.hotfix.0"
     ],
     "binaries": {
-      "linux/amd64": "https://github.com/MANTRA-Chain/mantrachain/releases/download/v6.1.0/mantrachaind-6.1.0-linux-amd64.tar.gz?checksum=sha256:a45cdb87b2948ccd54a6f7692d09117964c7c2805e94a7b77f8823bf67dc26b1",
-      "linux/arm64": "https://github.com/MANTRA-Chain/mantrachain/releases/download/v6.1.0/mantrachaind-6.1.0-linux-arm64.tar.gz?checksum=sha256:ca1bc9501630fed2ca348950033bcc287daec6e6f70527646342427dec98be67",
-      "darwin/amd64": "https://github.com/MANTRA-Chain/mantrachain/releases/download/v6.1.0/mantrachaind-6.1.0-darwin-amd64.tar.gz?checksum=sha256:9d2794775e3aa772265a29bef594d6d1527ed6d29e354f2391fe1a276facce6b",
-      "darwin/arm64": "https://github.com/MANTRA-Chain/mantrachain/releases/download/v6.1.0/mantrachaind-6.1.0-darwin-arm64.tar.gz?checksum=sha256:e92777f77952e7851c8d42209e6ec21b5fa40a73b7c576a8a88e1a35e42eaeb5"
+      "linux/amd64": "https://github.com/MANTRA-Chain/mantrachain/releases/download/v7.0.0-rc2.hotfix.0/mantrachaind-7.0.0-rc2.hotfix.0-linux-amd64.tar.gz?checksum=sha256:c5844252206974c00564c8f828a3c4ef73d7b2692ac431ca68a28d1140078b6f",
+      "linux/arm64": "https://github.com/MANTRA-Chain/mantrachain/releases/download/v7.0.0-rc2.hotfix.0/mantrachaind-7.0.0-rc2.hotfix.0-linux-arm64.tar.gz?checksum=sha256:9f8fea55117ec92cf10fa4c9bcaf1df67382d28ea616fed2b755559ce7ea3afb",
+      "darwin/amd64": "https://github.com/MANTRA-Chain/mantrachain/releases/download/v7.0.0-rc2.hotfix.0/mantrachaind-7.0.0-rc2.hotfix.0-darwin-amd64.tar.gz?checksum=sha256:e92ea6399fe22d39c556d00d3688723425145bb7dcfd18b9f209fdaa5e2a10ff",
+      "darwin/arm64": "https://github.com/MANTRA-Chain/mantrachain/releases/download/v7.0.0-rc2.hotfix.0/mantrachaind-7.0.0-rc2.hotfix.0-darwin-arm64.tar.gz?checksum=sha256:e1cdefda719ca26774079dedcbec280c40db0c4809c5f79a79778a95b2c460d1"
     }
   },
   "fees": {
