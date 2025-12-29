@@ -33,7 +33,7 @@ on:
 
 jobs:
   create-guide:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-latest-on-prem
     steps:
       - uses: actions/checkout@v3
 
