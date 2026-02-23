@@ -8,6 +8,23 @@
 - **v7.0.0 Release**: [Release Page](https://github.com/MANTRA-Chain/mantrachain/releases/tag/v7.0.0)
 - **v7.0.0 Docker Image**: [ghcr.io/mantra-chain/mantrachain:v7.0.0](https://github.com/mantra-chain/mantrachain/pkgs/container/mantrachain)
 
+## Token Redenomination
+
+The v7.0.0 upgrade performs a one-time, on-chain token redenomination from the legacy `uom` denomination to the new `amantra` denomination. All token balances are scaled by a factor of **4,000,000,000,000 (4 x 10^12)** to align with the new 18-decimal `amantra` base unit. The display denomination becomes `mantra`.
+
+This is a **state-migration-only upgrade** -- no new modules are added, no modules are removed, and no store keys change. The upgrade handler migrates existing state in-place across all affected modules.
+
+Below are a few notable fee-related parameter changes. Note that 1 MANTRA = 10^18 amantra.
+
+| Item | Old Value | New Value | New Value (MANTRA) |
+|------|-----------|-----------|-------------------|
+| Gas Price `base_fee` | 0.01uom | 40000000000amantra | 0.00000004 MANTRA |
+| TokenFactory `denom_creation_fee` | 88000000uom | 352000000000000000000amantra | 352 MANTRA |
+| Governance `min_deposit` | 88888000000uom | 355552000000000000000000amantra | 355,552 MANTRA |
+| Min staking amount | 1uom | 1amantra | 10^-18 MANTRA |
+
+---
+
 ## Hardware Requirements
 
 ### Memory Specifications
