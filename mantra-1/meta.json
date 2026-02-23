@@ -12,12 +12,9 @@
       "genesis_url": "https://raw.githubusercontent.com/MANTRA-Chain/net/main/mantra-dukong-1/genesis.json"
     },
     "git_repo": "github.com/MANTRA-Chain/mantrachain",
-    "recommended_version": "v6.1.3",
+    "recommended_version": "v6.1.0",
     "compatible_versions": [
-      "v6.1.0",
-      "v6.1.1",
-      "v6.1.2",
-      "v6.1.3"
+      "v6.1.0"
     ],
     "binaries": {
       "linux/amd64": "https://github.com/MANTRA-Chain/mantrachain/releases/download/v6.1.0/mantrachaind-6.1.0-linux-amd64.tar.gz?checksum=sha256:a45cdb87b2948ccd54a6f7692d09117964c7c2805e94a7b77f8823bf67dc26b1",
