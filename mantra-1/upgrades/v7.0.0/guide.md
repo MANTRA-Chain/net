@@ -12,7 +12,29 @@
 
 ### Memory Specifications
 
-Although this upgrade is not expected to be resource-intensive, a minimum of 32GB of RAM is advised. If you cannot meet this requirement, setting up a swap space is recommended.
+This upgrade includes state changes and may take longer than previous upgrades. During migration, it may take around 10-20 minutes depending on your node's data size.
+
+To avoid OOM during the upgrade process (which can lead to data corruption), increase node resources before the upgrade height.
+
+Recommended VM resource limits:
+
+```yaml
+archive node:
+    cpu: "4"
+    memory: "64Gi"
+
+full node:
+    cpu: "4"
+    memory: "50Gi"
+
+sentry and validator:
+    cpu: "2"
+    memory: "32Gi"
+```
+
+If you run on Kubernetes, treat the above values as pod resource limits.
+
+If your environment cannot meet these memory targets, setting up swap space is recommended as a fallback.
 
 #### Configuring Swap Space
 
