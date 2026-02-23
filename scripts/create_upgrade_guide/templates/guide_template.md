@@ -145,5 +145,6 @@ make install
 ## Additional Resources
 
 If you need more help, please:
-    - go to <https://docs.mantrachain.io>
-    - join our discord at <https://discord.gg/fHSqUng7Hy>.
+
+- go to <https://docs.mantrachain.io>
+- join our discord at <https://discord.gg/fHSqUng7Hy>.
