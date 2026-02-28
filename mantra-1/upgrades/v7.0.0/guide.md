@@ -33,7 +33,7 @@ This upgrade includes state changes and may take longer than previous upgrades. 
 
 To avoid OOM during the upgrade process (which can lead to data corruption), increase node resources before the upgrade height.
 
-Recommended VM resource limits:
+Recommended minimum VM resources:
 
 ```yaml
 archive node:
@@ -49,7 +49,7 @@ sentry and validator:
     memory: "32Gi"
 ```
 
-If you run on Kubernetes, treat the above values as pod resource limits.
+If you run on Kubernetes, treat the above values as pod resource requests.
 
 If your environment cannot meet these memory targets, setting up swap space is recommended as a fallback.
 
