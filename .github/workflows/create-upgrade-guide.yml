@@ -37,6 +37,13 @@ jobs:
     steps:
       - uses: actions/checkout@v3
 
+      - name: Generate GitHub App token
+        id: app-token
+        uses: actions/create-github-app-token@v1
+        with:
+          app-id: ${{ vars.GH_APP_ID }}
+          private-key: ${{ secrets.GH_APP_PRIVATE_KEY }}
+
       - name: Set up Python
         uses: actions/setup-python@v4
         with:
@@ -55,7 +62,7 @@ jobs:
       - name: Create Pull Request
         uses: peter-evans/create-pull-request@v7
         with:
-          token: ${{ secrets.PR_AUTOMATION_GIT_TOKEN }}
+          token: ${{ steps.app-token.outputs.token }}
           commit-message: "feat: add upgrade guide for ${{ inputs.upgrade_version }}"
           title: "feat: add upgrade guide for ${{ inputs.chain_id }} ${{ inputs.upgrade_version }}"
           body: |
