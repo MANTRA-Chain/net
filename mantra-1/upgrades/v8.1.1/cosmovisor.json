@@ -1,8 +1,8 @@
 {
   "binaries": {
-    "linux/amd64": "https://github.com/MANTRA-Chain/mantrachain/releases/download/v8.1.1/mantrachaind-8.1.1-linux-amd64.tar.gz?checksum=sha256:5e5363b0cae75757678f88dc36d3727beb3e45fa4efb225197755a0f2eff2fce",
-    "linux/arm64": "https://github.com/MANTRA-Chain/mantrachain/releases/download/v8.1.1/mantrachaind-8.1.1-linux-arm64.tar.gz?checksum=sha256:b60ddb3090a9e47dba25d91638ab0eb80f32186dc003f73aa63c104da87b6013",
-    "darwin/amd64": "https://github.com/MANTRA-Chain/mantrachain/releases/download/v8.1.1/mantrachaind-8.1.1-darwin-amd64.tar.gz?checksum=sha256:755ef4cf77ccdfee5b2b904c5f0021ee1b894dc1f88aaf5e7e4ca0c0af7095b4",
-    "darwin/arm64": "https://github.com/MANTRA-Chain/mantrachain/releases/download/v8.1.1/mantrachaind-8.1.1-darwin-arm64.tar.gz?checksum=sha256:d1983d716fbb490e8a47735674e556cd3b03ad85219976d47c79068acb8f8098"
+    "linux/amd64": "https://github.com/MANTRA-Chain/mantrachain/releases/download/v8.1.1/mantrachaind-8.1.1-linux-amd64.tar.gz?checksum=sha256:95ed62ab8d6e1854f6bcc0c7d645beb5cc81aab6122827ab9b26d3e1747954ca",
+    "linux/arm64": "https://github.com/MANTRA-Chain/mantrachain/releases/download/v8.1.1/mantrachaind-8.1.1-linux-arm64.tar.gz?checksum=sha256:bbbba733f36d95f4ab7107e9db2dae09b02b0bc08a8c340c88935b0845943eb6",
+    "darwin/amd64": "https://github.com/MANTRA-Chain/mantrachain/releases/download/v8.1.1/mantrachaind-8.1.1-darwin-amd64.tar.gz?checksum=sha256:3674aed798ed022573aea92277dd80c7d37b9cd4647fd61c51548a8ebb51c7ab",
+    "darwin/arm64": "https://github.com/MANTRA-Chain/mantrachain/releases/download/v8.1.1/mantrachaind-8.1.1-darwin-arm64.tar.gz?checksum=sha256:8854434dd79e66fb6abacddd5acc771108437d77783c8469587488939c522b16"
   }
 }
