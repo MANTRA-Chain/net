@@ -1,0 +1,8 @@
+{
+  "binaries": {
+    "linux/amd64": "https://pkg.mantrachain.io/mantrachaind/v8.6.0-pre.1/mantrachaind-8.6.0-pre.1-linux-amd64.tar.gz?checksum=sha256:a2dd494e0c37f3c8cacb4a529e501106f1d5510f7b61c6f3b43515dd9a7d9ae4",
+    "linux/arm64": "https://pkg.mantrachain.io/mantrachaind/v8.6.0-pre.1/mantrachaind-8.6.0-pre.1-linux-arm64.tar.gz?checksum=sha256:00e62dff6d4e64a1a0d462511b8598e2472962b3381c2a3bd00a0028bbfc4c90",
+    "darwin/amd64": "https://pkg.mantrachain.io/mantrachaind/v8.6.0-pre.1/mantrachaind-8.6.0-pre.1-darwin-amd64.tar.gz?checksum=sha256:b8d34d188f83abce2584f578458ea89a7249d6cd1efb993902175e9956734c11",
+    "darwin/arm64": "https://pkg.mantrachain.io/mantrachaind/v8.6.0-pre.1/mantrachaind-8.6.0-pre.1-darwin-arm64.tar.gz?checksum=sha256:29083c36782eb6f159fc86f3ee8e5994a07d077bac2ec46001c634c792ccbf3a"
+  }
+}
