@@ -52,7 +52,7 @@ _Run these commands to install and configure Cosmovisor_:
 
 
 ```sh
-go install github.com/cosmos/cosmos-sdk/cosmovisor/cmd/cosmovisor@v1.6.0
+go install cosmossdk.io/tools/cosmovisor/cmd/cosmovisor@v1.6.0
 mkdir -p ~/.mantrachain
 mkdir -p ~/.mantrachain/cosmovisor
 mkdir -p ~/.mantrachain/cosmovisor/genesis
