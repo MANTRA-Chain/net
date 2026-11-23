@@ -2,10 +2,9 @@
 
 ## Overview
 
-- **v8.9.0-pre.4 Proposal**: [Proposal Page](https://www.mintscan.io/mantra/proposals/43)
+- **v8.9.0-pre.4 Proposal**: [Proposal Page](https://mantrascan.io/mainnet/governance/43)
 - **v8.9.0-pre.4 Upgrade Block Height**: 19825888
-- **v8.9.0-pre.4 Upgrade Countdown**: [Block Countdown](https://www.mintscan.io/mantra/block/19825888)
-- **v8.9.0-pre.4 Release**: [Release Page](https://github.com/MANTRA-Chain/mantrachain/releases/tag/v8.9.0-pre.4)
+- **v8.9.0-pre.4 Upgrade Countdown**: [Block Countdown](https://mantrascan.io/block/19825888)
 - **v8.9.0-pre.4 Docker Image**: [ghcr.io/mantra-chain/mantrachain:v8.9.0-pre.4](https://github.com/mantra-chain/mantrachain/pkgs/container/mantrachain)
 
 ## Hardware Requirements
@@ -87,7 +86,7 @@ upgrade_name="v8.9.0-pre.4"
 mkdir -p ~/.mantrachain/cosmovisor/upgrades/$upgrade_name/bin
 if [[ $(uname -m) == 'arm64' ]] || [[ $(uname -m) == 'aarch64' ]]; then export ARCH="arm64"; else export ARCH="amd64"; fi
 if [[ $(uname) == 'Darwin' ]]; then export OS="darwin"; else export OS="linux"; fi
-wget https://github.com/MANTRA-Chain/mantrachain/releases/download/v$upgrade_version/mantrachaind-$upgrade_version-$OS-$ARCH.tar.gz
+wget https://pkg.mantrachain.io/mantrachaind/v$upgrade_version/mantrachaind-$upgrade_version-$OS-$ARCH.tar.gz
 tar -xvf mantrachaind-$upgrade_version-$OS-$ARCH.tar.gz -C ~/.mantrachain/cosmovisor/upgrades/$upgrade_name/bin
 rm mantrachaind-$upgrade_version-$OS-$ARCH.tar.gz
 ```
@@ -124,7 +123,7 @@ upgrade_version="8.9.0-pre.4"
 upgrade_name="v8.9.0-pre.4"
 if [[ $(uname -m) == 'arm64' ]] || [[ $(uname -m) == 'aarch64' ]]; then export ARCH="arm64"; else export ARCH="amd64"; fi
 if [[ $(uname) == 'Darwin' ]]; then export OS="darwin"; else export OS="linux"; fi
-wget https://github.com/MANTRA-Chain/mantrachain/releases/download/v$upgrade_version/mantrachaind-$upgrade_version-$OS-$ARCH.tar.gz
+wget https://pkg.mantrachain.io/mantrachaind/v$upgrade_version/mantrachaind-$upgrade_version-$OS-$ARCH.tar.gz
 tar -xvf mantrachaind-$upgrade_version-$OS-$ARCH.tar.gz -C $GOPATH/bin
 ```
 
