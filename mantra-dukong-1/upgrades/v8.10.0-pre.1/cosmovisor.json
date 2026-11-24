@@ -1,0 +1,6 @@
+{
+  "binaries": {
+    "linux/amd64": "https://pkg.mantrachain.io/mantrachaind/v8.10.0-pre.1/mantrachaind-8.10.0-pre.1-linux-amd64.tar.gz?checksum=sha256:afe341a234fd0555eded1f8433b37124d02b95327a7ca02f7b391e53115a972a",
+    "linux/arm64": "https://pkg.mantrachain.io/mantrachaind/v8.10.0-pre.1/mantrachaind-8.10.0-pre.1-linux-arm64.tar.gz?checksum=sha256:0e72ace6976e1d4e0873126dae3f646c7f701aefcc3341112dbebabd0ceb9a29"
+  }
+}
